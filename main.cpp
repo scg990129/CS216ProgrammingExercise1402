@@ -10,6 +10,7 @@ using namespace std;
 int main()
 {
     const static string ERRORIllegalOperation = "ERROR \nIllegal operation";
+    const static string ERRORDivisionbyZero = "Division by zero";
     int num1, num2;
     char opr;
 
@@ -40,9 +41,9 @@ int main()
                 if (num2 != 0)
                     cout << num1 / num2 << endl;
                 else{
-                    char *i = new char[100];
-                    sprintf(i, "ERROR \nCannot divide by zero: %i/%i", num1, num2);
-                    throw i;
+                    // char *i = new char[100];
+                    // sprintf(i, "ERROR \nCannot divide by zero: %i/%i", num1, num2);
+                    throw ERRORDivisionbyZero;
                     // throw sprintf(new char[100], "ERROR \nCannot divide by zero: %i/%i", num1, num2);
                 }
 
@@ -53,8 +54,6 @@ int main()
                 // cout << "Illegal operation" << endl;
         }
     }catch (string& error){
-        cout << error << endl;
-    }catch (char *error){
         cout << error << endl;
     }
 
