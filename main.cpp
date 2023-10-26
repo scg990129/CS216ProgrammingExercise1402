@@ -65,3 +65,15 @@ Redo Programming Exercise 8 of Chapter 4
  so that your program handles exceptions such as division by zero and invalid input.
 Your program should print Division by zero when 0 is entered for a denominator.
  */
+
+/*
+ * int age = 17;
+
+try {
+  if (age < 18) {
+    throw std::runtime_error("Age must be greater than or equal to 18.");
+  }
+} catch (const std::exception& e) {
+  std::cout << e.what() << std::endl;
+}
+ */
